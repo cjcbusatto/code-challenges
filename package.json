@@ -1,0 +1,14 @@
+{
+  "name": "code-challenges",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": "git@github.com:cjcbusatto/code-challenges.git",
+  "author": "Claudio Busatto <cjcbusatto@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "jest": "^24.9.0"
+  }
+}
