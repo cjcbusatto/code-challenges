@@ -13,8 +13,8 @@ function solution(A) {
   const positiveValuesOnly = new Set(arr);
   arr = [...positiveValuesOnly];
 
-  const length = arr.length;
-  for (let i = 0; i < length; i++) {
+  const { length } = arr;
+  for (let i = 0; i < length; i += 1) {
     if (arr[i] - 1 < length && arr[arr[i] - 1] > 0) {
       arr[arr[i] - 1] = -arr[arr[i] - 1];
     }
@@ -32,10 +32,6 @@ function solution(A) {
   }
 
   return arr[0] - 1;
-}
-const arr = [];
-for (let i = 0; i < 201; i++) {
-  if (i !== 101) arr.push(i);
 }
 
 module.exports = solution;
