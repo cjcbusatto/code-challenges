@@ -1,6 +1,6 @@
 function solution(A) {
     if (A.length) {
-        const sortedA = A.sort();
+        const sortedA = A.sort((a, b) => a - b);
         let bigPosNum;
 
         /** If array first element was bigger than 1 */
@@ -31,14 +31,3 @@ function solution(A) {
 };
 
 module.exports = solution;
-
-
-
-
-// test against 
-// solution([]);
-// solution([-1, -3]);
-// solution([1, 3, 2, 4, 6, 7, 1]);
-// solution([1, 2, 3]);
-// solution([2, 3, 2, 88, -1, 0, 6, 10, 12, ]);
-// solution([22, 322]);
