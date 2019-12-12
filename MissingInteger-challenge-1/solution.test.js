@@ -1,6 +1,16 @@
 const solution = require('./solution');
 const solutionB = require('./solutionB');
 
+function shuffleArray(arr) {
+  for (let i = arr.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    const temp = arr[i];
+    arr[i] = arr[j];
+    arr[j] = temp;
+  };
+  return arr;
+}
+
 test('[] to be equal to 1', () => {
   expect(solution([])).toBe(1);
   expect(solutionB([])).toBe(1);
@@ -44,12 +54,7 @@ test('chaotic + sequence 1, 2, ..., 40000 (without minus), expected 40000', () =
     arr.push(i);
   };
 
-  for (let i = arr.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1));
-    const temp = arr[i];
-    arr[i] = arr[j];
-    arr[j] = temp;
-  }
+  arr = shuffleArray(arr);
 
   expect(solution(arr)).toBe(40000);
   expect(solutionB(arr)).toBe(40000);
@@ -61,12 +66,7 @@ test('chaotic + many -1, 1, 2, 3 (with minus), expected 10000', () => {
     arr.push(i);
   };
 
-  for (let i = arr.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1));
-    const temp = arr[i];
-    arr[i] = arr[j];
-    arr[j] = temp;
-  }
+  arr = shuffleArray(arr);
 
   expect(solution(arr)).toBe(10000);
   expect(solutionB(arr)).toBe(10000);
@@ -78,13 +78,8 @@ test('chaotic sequences length=10005 (with minus), expected 111', () => {
     if (i !== 111) arr.push(i); 
   };
 
-  for (let i = arr.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1));
-    const temp = arr[i];
-    arr[i] = arr[j];
-    arr[j] = temp;
-  }
-
+  arr = shuffleArray(arr);
+  
   expect(solution(arr)).toBe(111);
   expect(solutionB(arr)).toBe(111);
 });
