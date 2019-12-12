@@ -41,8 +41,7 @@ test('shuffled sequence of 0...100 and then 102...200, expected 101', () => {
   for (let i = 0; i < 201; i++) {
     if (i !== 101) arr.push(i);
   }
-  console.log(arr.length);
-  console.log(arr);
+  
   expect(solution(arr)).toBe(101);
   expect(solutionB(arr)).toBe(101);
 });
