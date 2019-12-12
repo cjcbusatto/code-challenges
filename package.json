@@ -6,7 +6,7 @@
     "test": "jest"
   },
   "repository": "git@github.com:cjcbusatto/code-challenges.git",
-  "author": "Claudio Busatto <cjcbusatto@gmail.com>",
+  "contributors": ["Claudio Busatto <cjcbusatto@gmail.com>", "Yasser Morteza <github.com/Yassermorteza>"],
   "license": "MIT",
   "husky": {
     "hooks": {
